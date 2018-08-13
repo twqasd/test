@@ -1,0 +1,20 @@
+git add .
+git status
+git commit -m '代码说明'
+git show 
+#提交代码远程
+git push origin master
+#远程拉取代码
+git pull origin master
+#分部拉取代码
+git fetch
+git diff origin/master
+git merge origin
+
+
+#冲突
+
+git stash
+git pull   origin master
+git stash pop stash@{0}
+#编辑冲突文件
