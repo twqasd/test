@@ -17,4 +17,21 @@ git merge origin
 git stash
 git pull   origin master
 git stash pop stash@{0}
+<<<<<<< Updated upstream
 #编辑冲突文件
+=======
+#编辑冲突文件
+
+ git checkout -b wms
+
+git push origin wms:wms
+git push origin :wms
+
+
+#合并
+git merge --no-ff  wms 
+
+git rebase wms 
+
+git cherry-pick 99daed2
+>>>>>>> Stashed changes
