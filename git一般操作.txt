@@ -11,27 +11,27 @@ git fetch
 git diff origin/master
 git merge origin
 
-
 #冲突
-
 git stash
 git pull   origin master
 git stash pop stash@{0}
-<<<<<<< Updated upstream
-#编辑冲突文件
-=======
-#编辑冲突文件
 
- git checkout -b wms
-
+#创建分支
+git checkout -b wms
+#推送绑定分支
 git push origin wms:wms
+
+删除分支
+git git branch -d wms
+删除远程分支
 git push origin :wms
 
 
 #合并
 git merge --no-ff  wms 
 
+#线性合并
 git rebase wms 
 
+#合并日志节点
 git cherry-pick 99daed2
->>>>>>> Stashed changes
