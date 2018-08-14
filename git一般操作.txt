@@ -31,7 +31,26 @@ git push origin :wms
 git merge --no-ff  wms 
 
 #线性合并
-git rebase wms 
+git rebase master
+git add .
+git rebase --continue 继续
+git rebase --abort    取消
 
 #合并日志节点
 git cherry-pick 99daed2
+
+#取消合并
+git reset --hard HEAD~
+
+#取消提交
+git reset --soft 
+git reset --mixed 	
+git reset --hard  #删除数据
+
+
+分支思想
+master 线上主分支
+	hotfix-* 紧急BUG修复分支 ->线上,开发 
+	release-* 发布分支 ->线上,开发 git merge --no-ff release-1.2  git tag -a 1.2
+develop 开发主分支
+	feature 功能分支 ->开发 git merge --no-ff myfeature
