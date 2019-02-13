@@ -15,11 +15,16 @@ git merge origin
 git stash
 git pull   origin master
 git stash pop stash@{0}
+git checkout ./   --更新目录
+git stash pop
 
 #创建分支
 git checkout -b wms
 #推送绑定分支
 git push origin wms:wms
+#绑定远程分支
+git branch --set-upstream-to=origin/wms wms
+
 
 删除分支
 git git branch -d wms
