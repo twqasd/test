@@ -15,8 +15,20 @@ git merge origin
 git stash
 git pull   origin master
 git stash pop stash@{0}
-git checkout ./   --更新目录
+git checkout ./   --更新目录,放弃未add缓存的本地修改
 git stash pop
+
+#放弃本地修改
+--未add缓存
+git checkout -- filepathname  文件
+git checkout . 全部
+--已add缓存, 取消add缓存返回上面状态
+git reset HEAD filepathname 
+git reset HEAD . 全部
+--已commit , 取消add缓存返回上面状态
+git reset --hard HEAD^   退回上一次commit
+
+
 
 #创建分支
 git checkout -b wms
